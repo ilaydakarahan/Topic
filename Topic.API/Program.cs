@@ -21,6 +21,9 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IManuelDal, ManuelDal>();
 builder.Services.AddScoped<IManuelService, ManuelManager>();
 
+builder.Services.AddScoped<IQuestionDal, QuestionDal>();
+builder.Services.AddScoped<IQuestionService, QuestionManager>();
+
 builder.Services.AddScoped(typeof(IGenericDal<>), typeof(GenericRepository<>));
 
 

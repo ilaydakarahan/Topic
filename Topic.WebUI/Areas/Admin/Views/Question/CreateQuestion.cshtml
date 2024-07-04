@@ -1,0 +1,16 @@
+﻿@using Topic.WebUI.Dtos.QuestionDtos
+@model CreateQuestionDto
+@{
+    ViewData["Title"] = "Sorular";
+    ViewData["SubTitle"] = "Yeni Soru Oluştur";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+<form method="post">
+    <label>Soru Başlığı</label>
+	<input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+	<input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>

@@ -11,8 +11,15 @@ namespace Topic.BusinessLayer.Concrete
 {
     public class CategoryManager : GenericManager<Category>, ICategoryService
     {
-        public CategoryManager(IGenericDal<Category> genericDal) : base(genericDal)
+        private readonly ICategoryDal _categoryDal;
+        public CategoryManager(IGenericDal<Category> genericDal, ICategoryDal categoryDal) : base(genericDal)
         {
+            _categoryDal = categoryDal;
+        }
+
+        public List<Category> TGetActiveCategories()
+        {
+            return _categoryDal.GetActiveCategories();
         }
     }
 }

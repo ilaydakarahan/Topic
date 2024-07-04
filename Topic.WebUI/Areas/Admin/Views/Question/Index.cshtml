@@ -1,0 +1,33 @@
+﻿@using Topic.WebUI.Dtos.QuestionDtos
+@model List<ResultQuestionDto>
+@{
+    ViewData["Title"] = "Sorular";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Soru Başlığı</th>
+        <th>Açıklama</th>
+        <th>İşlemler</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.QuestionId</th>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>
+                <a asp-action="DeleteQuestion" asp-route-id="@item.QuestionId" class="btn btn-outline-danger">Sil</a>
+                <a asp-action="UpdateQuestion" asp-route-id="@item.QuestionId" class="btn btn-outline-info">Güncelle</a>
+            </td>
+
+        </tr>
+    }
+</table>
+
+<br />
+<a asp-action="CreateQuestion" class="btn btn-outline-primary">Yeni Soru Ekle</a>
+

@@ -7,12 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ViewComponents\Default\_DefaultBlogComponent.cs~RF16e395b6.TMP" />
+    <None Remove="Views\Shared\Components\_DefaultBlogComponent\Default.cshtml~RF16efdd44.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="X.PagedList" Version="9.1.2" />
   </ItemGroup>
 
 </Project>

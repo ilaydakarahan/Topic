@@ -19,6 +19,13 @@ namespace Topic.API.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet("GetBlogCount")]
+        public IActionResult GetBlogCount()
+        {
+            var blogs = _blogService.TGetBlogCount();
+            return Ok(blogs);
+        }
+
         [HttpGet]
         public IActionResult GetAllBlogs()
         {
@@ -27,10 +34,17 @@ namespace Topic.API.Controllers
             return Ok(blogs);
         }
 
-        [HttpGet("{id}")]
+		[HttpGet("GetBlogsByCategoryId/{id}")]
+		public IActionResult GetBlogsByCategoryId(int id)
+		{
+			var values = _blogService.TGetBlogsByCategoryId(id);
+			return Ok(values);
+		}
+
+		[HttpGet("{id}")]
         public IActionResult GetBlogById(int id)
         {
-            var value = _blogService.TGetById(id);
+            var value = _blogService.TGetBlogWithCategoryById(id);
             var blog = _mapper.Map<ResultBlogDto>(value);
             return Ok(blog);
         }

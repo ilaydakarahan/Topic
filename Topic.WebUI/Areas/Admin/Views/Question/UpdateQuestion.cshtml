@@ -1,0 +1,19 @@
+﻿@using Topic.WebUI.Dtos.QuestionDtos
+@model UpdateQuestionDto
+@{
+    ViewData["Title"] = "Sorular";
+    ViewData["SubTitle"] = "Soruları Güncelleme";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="QuestionId" />
+    <label>Soru Başlığı</label>
+    <input type="text" class="form-control" asp-for="Title" />
+    <br />
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+

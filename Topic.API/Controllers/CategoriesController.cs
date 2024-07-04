@@ -61,5 +61,13 @@ namespace Topic.API.Controllers
             return Ok("Başarıyla güncellendi");
         }
 
+        [HttpGet("GetActiveCategories")]    //diğer get istekleriyle karışmasın diye metodun adını parametre olarak yanına ekledik.
+        public IActionResult GetActiveCategories()
+        {
+            var values = _categoryService.TGetActiveCategories();
+            var mappedResult = _mapper.Map<List<ResultCategoryDto>>(values);
+            return Ok(mappedResult);
+        }
+
     }
 }
