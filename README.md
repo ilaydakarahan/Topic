@@ -3,7 +3,7 @@
 
 
 
-<b> M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde katılmış olduğum fullstack developer eğitiminin 5. projesi olan Topic Blog projemi tamamladım. 
+<b> M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde katılmış olduğum fullstack developer eğitiminde Topic Blog projemi tamamladım. 
 Bu projede ;
 * Kategorilere göre blogları listeleyebilir,
 * Blog detayları sayfasında tüm yazıyı görüntüleyip okuyabilir,
